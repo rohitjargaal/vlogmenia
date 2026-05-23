@@ -1,1 +1,1 @@
-export const Backendapi = "http://localhost:7200"
+export const Backendapi = "https://vlogmenia-backend.onrender.com"
