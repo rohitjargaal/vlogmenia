@@ -1,0 +1,735 @@
+/* common code */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+:root {
+  --boxshadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  --primarycolor: #F5F9FF;
+  --lightbluecolor: #3a86ff;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.body-elements {
+  width: 100%;
+  min-height: calc(100vh - 5rem);
+  flex: 1;
+  display: flex;
+}
+a {
+  text-decoration: none;
+}
+
+.shadow {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.white {
+  color: #fff;
+}
+
+.black {
+  color: #000;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.textcenter {
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 7px;
+  margin-top: 1rem;
+}
+
+.primary-btnclass {
+  color: white;
+  background-color: var(--lightbluecolor);
+}
+
+.width-100 {
+  width: 100%;
+}
+
+
+.row {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.aligncenter {
+  align-items: center;
+}
+
+.justifycenter {
+  justify-content: center;
+}
+
+
+label {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+input {
+  padding: 0.8rem 1rem;
+  font-size: 1.1rem;
+  background-color: var(--primarycolor);
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+textarea {
+  padding: 0.8rem 1rem;
+  background-color: var(--primarycolor);
+  border: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+
+
+/* ==================================================width height set============================================ */
+
+.dashboard,
+.newblog,
+.editprofile,
+.myvlog,
+.detailBlog-page,
+.contactpage,
+.editblog-page,
+.aboutpage {
+  width: 100%;
+  height: auto;
+  padding: 2rem 120px;
+}
+.signuppage,
+.loginpage{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6c757d;
+}
+.homepage {
+  width: 100%;
+}
+
+.myvlog {
+  display: flex;
+  flex-direction: column;
+}
+
+.detailBlog-page {
+  gap: 1rem;
+}
+
+.contactpage {
+  gap: 2rem;
+}
+
+/* =================================================== edit profile page ===================================================  */
+
+
+.editprofile .top {
+  text-align: center;
+}
+
+.editprofile .main-content {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 2rem;
+  gap: 1rem;
+  margin: 0px auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 1rem;
+}
+
+.editprofile .main-content .top {
+  grid-column: 1 / span 3;
+  margin-bottom: 2rem;
+}
+
+.editprofile .main-content form {
+  grid-column: 1 / span 2;
+  background-color: #fff;
+  padding: 0px 2rem;
+  width: 100%;
+}
+
+.editprofile .main-content form .input-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+
+.editprofile .main-content form .input-container i {
+  color: #3a86ff;
+  font-weight: 900;
+}
+
+.editprofile .main-content form .input-container input {
+  border-radius: 5px;
+}
+
+.editprofile .main-content form .input-container .image-con {
+  border: 2px dotted #EAF3FF;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #EAF3FF;
+}
+
+.editprofile .main-content form .input-container img {
+  height: 20vh;
+  object-fit: contain;
+}
+
+.editprofile .main-content .tips {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #EAF3FF;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.editprofile .main-content .tips h1 {
+  color: #3a86ff;
+}
+
+/* =================================================== edit blog page =================================================== */
+
+
+
+.editblog-page form {
+  width: 50%;
+  margin: 0px auto;
+}
+
+.editblog-page form h1,.editblog-page form p{
+  text-align: center;
+}
+/* =================================================== navbar page styling =================================================== */
+
+.navbar {
+  background-color: #fff;
+  height: 5rem;
+  padding: 0px 100px;
+  display: flex;
+  border-bottom: 1px solid #e3e3e3;
+  z-index: 1000;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #3a86ff;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.navbar .nav-list {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  margin: 0px !important;
+  align-items: center;
+}
+
+.navbar .nav-list li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown .title {
+  cursor: pointer;
+}
+
+.nav-dropdown .nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid #e3e3e3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 180px;
+  z-index: 10;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+  display: block;
+}
+
+.nav-dropdown-menu li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-dropdown-menu li a:hover {
+  background-color: #f0f0f0;
+  color: #3a86ff;
+}
+
+.navbar .fa-solid.fa-bars {
+  display: none;
+}
+
+
+/* =================================================== footer page styling =================================================== */
+
+.footer {
+  padding: 2rem 210px;
+  background-color: #fff !important;
+  border-top: 1px solid #e3e3e3;
+  width: 100%;
+}
+
+.footer .colcontainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+}
+
+.footer .colcontainer h3 {
+  margin-bottom: 1rem;
+}
+
+.footer .colcontainer ul {
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer .colcontainer ul li {
+  width: max-content;
+}
+
+.footer .colcontainer ul li:hover {
+  cursor: pointer;
+  color: #3a86ff;
+}
+
+.footer p {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+
+/* =================================================== signup or login page styling ===================================================  */
+
+
+.signuppage .image,
+.loginpage .image {
+  background-color: #f7faff;
+}
+
+.signuppage .card,
+.loginpage .card {
+  width: 80%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.signuppage .card form,
+.loginpage .card form{
+  background-color: #eaf3ff;
+}
+form {
+  background-color: transparent;
+  padding: 2rem;
+  height: auto;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.signuppage img,
+.loginpage img {
+  width: 100%;
+  height: 50vh;
+  object-fit: contain;
+}
+
+
+/*=================================================== contact page styling ===================================================*/
+
+
+
+.contactpage form {
+  width: 60%;
+  padding: 2rem 1.5rem;
+  margin: 0px auto;
+  box-shadow: var(--boxshadow);
+}
+
+.contactpage form input,
+.contactpage form textarea {
+  margin-bottom: 1rem;
+}
+
+
+
+
+/* about page styling */
+
+.aboutpage {
+  width: 100%;
+  margin: 0px auto;
+  text-align: center;
+  padding: 3rem 0px;
+  background-color: var(--primarycolor);
+}
+
+
+/* ===================================================== home page styling   ===================================================*/
+
+
+
+.homepage .hero-section {
+  height: calc(100vh - 5rem);
+  gap: 1rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../public/media/images/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+.homepage .midbar {
+  justify-content: space-between;
+  padding: 3rem 120px;
+}
+
+.homepage input {
+  width: 40%;
+  border: 1px solid #e3e3e3;
+}
+
+/* ===================================================== card boxes styling ==========================================*/
+.card-group {
+  padding: 1rem 120px;
+  margin: 3rem 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 2rem;
+}
+
+.card-group a {
+  color: #000;
+}
+
+.card-group a .card {
+  border: none;
+  height: auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: 0.3s;
+}
+
+.card-group a .card img {
+  object-fit: cover;
+  height: 20rem;
+  width: 100%;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.card-group a .card .content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 10px;
+}
+
+.card-group a .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================================================== DASHBOARD=========================================================== */
+
+
+.dashboard .top-section {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  align-items: center;
+}
+
+.dashboard .top-section .left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dashboard .top-section .right {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.dashboard .top-section .right .container {
+  padding: 1.2rem;
+  border-radius: 16px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard .top-section .right .container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.dashboard .top-section .right .container i {
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: 12px;
+  background: #f1f6ff;
+}
+
+.dashboard .bottom-section {
+  margin: 3rem auto;
+  width: 65%;
+  padding: 1.5rem;
+  border-radius: 20px;
+  background: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-image {
+  width: 100%;
+  height: 20rem;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 3px solid #eaf3ff;
+}
+
+.dashboard .bottom-section .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dashboard .bottom-section .content .top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard .bottom-section .content h4 {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #EAF3FF;
+  color: #3a86ff;
+  font-weight: 500;
+}
+
+.dashboard .bottom-section .content button {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #3a86ff, #5fa8ff);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dashboard .bottom-section .content button:hover {
+  transform: scale(1.05);
+}
+
+.dashboard .bottom-section .content p {
+  background: #f4f8ff;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/*================================================ new vlog page styling *================================================*/
+.newblog{
+    gap: 2rem;
+}
+.newblog .left{
+  padding: 1rem 2rem;
+    width: max-content;
+    height: max-content;
+    background-color: #f7faff;
+}
+.newblog .left .content {
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.newblog  i {
+  font-size: 1.5rem;
+  color: var(--lightbluecolor);
+}
+
+.newblog .left .content h1 {
+  font-size: 3rem;
+}
+
+.newblog .left .content p {
+  color: #6c757d;
+}
+.newblog .right form {
+  width: 100%;
+  padding: 3rem;
+  box-shadow: var(--boxshadow);
+}
+
+
+
+input::file-selector-button {
+  background-color: #3a86ff;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.5rem 0.7rem;
+}
+
+/*=================================================== myblog page styling ==================================================*/
+
+
+.myvlog input {
+  width: 80%;
+  margin: 1rem auto;
+  border: 1px solid #e3e3e3;
+}
+
+
+/* ==============================================detailblog page styling =========================================================== */
+
+.detailBlog-page .card{
+  height: fit-content;
+  padding: 1rem;
+  background-color: #F5F9FF;
+}
+.detailBlog-page .image {
+  width: 30%;
+  height: fit-content;
+}
+
+.detailBlog-page .image img {
+  object-fit: cover;
+  border-radius: 1rem;
+  width: 100%;
+  height: 50vh;
+}
+
+.detailBlog-page .content {
+  padding: 1rem;
+  height: auto;
+  width: 70%;
+}
+
+.detailBlog-page .content h1 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  border-bottom: 5px solid #003566;
+  width: max-content;
+  padding: 0.6rem;
+}
+
+.detailBlog-page .content p {
+  margin-bottom: 1rem;
+  color: #6c757d;
+}
+
+.detailBlog-page .content p span {
+  color: #000;
+  font-weight: 600;
+}
+
+
+
+.loaderpage {
+  height: calc(100vh - 5rem);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.loaderpage .loader {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 5px solid #e3e3e3;
+  border-top: 5px solid #000;
+  animation: spinner 1s infinite;
+}
+
+@keyframes spinner {
+  100% {
+    rotate: 360deg;
+  }
+}
+
+.loaderpage h1 {
+  font-weight: 400 !important;
+  font-size: 1.3rem;
+}
